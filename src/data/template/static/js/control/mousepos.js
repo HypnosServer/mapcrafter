@@ -17,7 +17,7 @@ MousePosControl.prototype.create = function(wrapper) {
 			+ '<button type="button" class="btn btn-default">' + "X: " + Math.round(xzy[0]) + '</button>'
 			+ '<button type="button" class="btn btn-default">' + "Y: " + Math.round(xzy[2]) + '</button>'
 			+ '<button type="button" class="btn btn-default">' + "Z: " + Math.round(xzy[1]) + '</button>'
-			+ '<button type="button" class="btn btn-default">' + "r." + Math.round(xzy[0]/512) + "." + Math.round(xzy[1]/512) + ".mca" + '</button>'
+			+ '<button type="button" class="btn btn-default">' + "r." + (xzy[0] >> 9) + "." + (xzy[1] >> 9) + ".mca" + '</button>'
 			+ "</div>";
 		};
 	}(this.ui);
