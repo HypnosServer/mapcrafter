@@ -266,7 +266,7 @@ LogSyslogSink::~LogSyslogSink() {
 
 void LogSyslogSink::sink(const LogMessage& message) {
 	syslog(LogLevelHelper::levelToSyslog(message.level),
-			util::replaceAll(message.message, "%", "%%").c_str();
+			util::replaceAll((message.message, "%", "%%").c_str());
 }
 
 #endif
